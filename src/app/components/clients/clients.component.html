@@ -2,7 +2,11 @@
     <div class="col-md-6">
       <h2><i class="fa fa-users"></i> Clients</h2>
       <div class="active-cyan-3 active-cyan-4 mb-4">
-        <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+        <input class="form-control" 
+        [(ngModel)]="searchterm" 
+        (keydown)="search($event)"
+
+        type="text" placeholder="Search" aria-label="Search">
       </div>
     </div>
     
@@ -28,6 +32,15 @@
       </tr>
     </tbody>
   </table>
+  <div class="container">
+    <div class="form-group">
+      <button type="button" class="btn btn-primary">
+        Number of Client <span class="badge badge-danger ml-2">
+          {{ totalClients }}
+        </span>
+      </button>
+    </div>
+  </div>
   
   <ng-template #noClients>
     <hr>

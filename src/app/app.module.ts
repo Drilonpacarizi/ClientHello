@@ -7,6 +7,8 @@ import { environment } from '../environments/environment';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireAuthModule } from 'angularfire2/auth';
+import { AngularFirestore } from 'angularfire2/firestore';
+
 
 
 import { AppComponent } from './app.component';
@@ -39,7 +41,7 @@ import { SettingsService } from './services/settings.service'
     LoginComponent,
     RegisterComponent,
     SettingsComponent,
-    NotFoundComponent
+    NotFoundComponent,
   ],
   imports: [
     BrowserModule,
