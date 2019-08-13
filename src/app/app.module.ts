@@ -9,6 +9,7 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AngularFirestore } from 'angularfire2/firestore';
 
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 
 import { AppComponent } from './app.component';
@@ -51,6 +52,7 @@ import { SettingsService } from './services/settings.service'
     AngularFireModule.initializeApp(environment.firbase, 'clientpanel'),
     AngularFirestoreModule,
     AngularFireAuthModule,
+    Ng2SearchPipeModule
     
   ],
   providers: [ClientService, AuthService, SettingsService],

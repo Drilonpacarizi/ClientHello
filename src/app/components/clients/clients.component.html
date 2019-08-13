@@ -3,9 +3,10 @@
       <h2><i class="fa fa-users"></i> Clients</h2>
       <div class="active-cyan-3 active-cyan-4 mb-4">
         <input class="form-control" 
-        [(ngModel)]="searchterm" 
+        [(ngModel)]="searchText" 
         (keydown)="search($event)"
-
+        name="search"
+        autocomplete="off"
         type="text" placeholder="Search" aria-label="Search">
       </div>
     </div>
@@ -24,7 +25,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let client of clients">
+      <tr *ngFor="let client of clients | filter:searchText" >
         <td>{{ client.firstName }} {{ client.lastName }}</td>
         <td>{{ client.email }}</td>
         <td>{{ client.balance | currency:"USD":"symbol" }}</td>

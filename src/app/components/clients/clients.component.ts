@@ -63,5 +63,8 @@ export class ClientsComponent implements OnInit {
     this.totalClients = this.clients.length
     return this.totalClients;
   }
+  // getFilterByName() {
+
+  // }
 
 }
